@@ -1,0 +1,12 @@
+training_biencoder/model
+training_crossencoder/model
+data/classification_data.json
+data/clean_corpus.json
+data/corpus.csv
+data/full_corpus.csv
+data/public_test.csv
+data/raw_dataset.json
+data/readme.txt
+data/test_set.json
+data/train.csv
+data/triplet_data.json
