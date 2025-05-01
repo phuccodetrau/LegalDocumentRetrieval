@@ -19,7 +19,7 @@ The dataset is sourced from the BKAI Legal Document Retrieval competition. It in
     "cid": "...",
     "text": "...",
     "segmented_text": "...",
-    "label": 1
+    "label": ...
   },
   "negative": {
     "cid": "...",
