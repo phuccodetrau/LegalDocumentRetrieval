@@ -46,7 +46,7 @@ class Trainer:
             num_warmup_steps=self.warmup_steps,
             num_training_steps=self.total_steps
         )
-        self.loss_fn = self.calc_loss_batch(inputs, targets)
+        self.loss_fn = F.CrossEntropyLoss()
         
     def calc_loss_batch(self, inputs, targets):
         self.model.train()
