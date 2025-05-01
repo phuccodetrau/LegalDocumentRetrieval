@@ -62,7 +62,7 @@ The corpus documents are stored in Elasticsearch with the following structure:
 - `embeddings`: Embedding vector of the document.
 
 ### 3. Cross-encoder
-The Cross-encoder finetunes the pretrained model `vinai/phobert-base` for reranking. The input consists of a concatenated question and corpus document, with a label of `1` if relevant and `0` if irrelevant. The `[CLS]` token output is passed through a linear layer, and the model is trained using **Cross-Entropy Loss**. The goal is to better understand the semantic relationship between the question and the corpus. During inference, the retrieved results from Elasticsearch are concatenated with the input question, passed through the Cross-encoder, and reranked based on the softmax score for label `1`.
+The Cross-encoder finetunes the pretrained model `vinai/phobert-base` for reranking. The input consists of a concatenated question and corpus document, with a label of `1` if relevant and `0` if irrelevant. The `[CLS]` token output is passed through a linear layer, and the model is trained using **Cross-Entropy Loss**. The goal is to better understand the semantic relationship between the question and the corpus. During inference, the retrieved results from Elasticsearch are concatenated with the input question, passed through the Cross-encoder, and reranked based on the softmax score for label `1` and then the final top 10 documents with the highest rerank scores are selected.
 
 #### Cross-encoder Dataset
 ```json
